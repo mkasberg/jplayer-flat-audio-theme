@@ -2,6 +2,8 @@
 
 A simple jPlayer theme for playing a single audio file.
 
+View a live preview (of this repository itself) at [https://mkasberg.github.io/jplayer-flat-audio-theme](https://mkasberg.github.io/jplayer-flat-audio-theme).
+
 ## Quick Start
 
 1. Install jPlayer on your site. This theme is audio-only, so you can follow the
