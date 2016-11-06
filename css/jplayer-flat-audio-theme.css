@@ -49,12 +49,12 @@
 
 /* Time Stamps */
 .jp-audio .jp-time-holder {
-    position: absolute;
-    top: 0;
-    left: 80px;
-    right: 80px;
-    height: 0; /* 0 height so seek bar is clickable. */
-    z-index: 2; /* Above progress bar display */
+  position: absolute;
+  top: 0;
+  left: 80px;
+  right: 80px;
+  height: 0; /* 0 height so seek bar is clickable. */
+  z-index: 2; /* Above progress bar display */
 }
 .jp-audio .jp-current-time {
   position: absolute;
@@ -108,12 +108,13 @@
 
 /* Volume Controls */
 .jp-audio .jp-volume-controls {
-    right: 0;
-    position: absolute;
-    top: 0;
-    width: 80px;
-    height: 100%;
-    background-color: #2C3E50;
+  right: 0;
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  text-align: left;
+  background-color: #2C3E50;
 }
 .jp-audio .jp-volume-controls a {
   text-decoration: none;
@@ -160,3 +161,4 @@
   color: #ffd850;
   background-color: #b28282;
 }
+

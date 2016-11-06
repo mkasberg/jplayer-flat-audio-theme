@@ -4,5 +4,12 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+.content-area {
+  width: 860px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
