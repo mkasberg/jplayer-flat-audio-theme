@@ -52,7 +52,7 @@
   position: absolute;
   top: 0;
   left: 80px;
-  right: 80px;
+  right: 90px;
   height: 0; /* 0 height so seek bar is clickable. */
   z-index: 2; /* Above progress bar display */
 }
@@ -91,6 +91,7 @@
   background-color: #2C3E50;
 }
 .jp-audio .jp-progress .jp-seek-bar {
+  background: #1e2e3e;
   position: absolute;
   top: 0;
   left: 0;
@@ -108,13 +109,14 @@
 
 /* Volume Controls */
 .jp-audio .jp-volume-controls {
-  right: 0;
+  background-color: #2C3E50;
+  height: 100%;
+  padding-left: 10px;
   position: absolute;
+  right: 0;
+  text-align: left;
   top: 0;
   width: 80px;
-  height: 100%;
-  text-align: left;
-  background-color: #2C3E50;
 }
 .jp-audio .jp-volume-controls a {
   text-decoration: none;
