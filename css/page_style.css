@@ -5,11 +5,29 @@
 body {
   font-family: "Open Sans", sans-serif;
   text-align: center;
+  background-color: #CFD8DC;
 }
 
 .content-area {
   width: 860px;
-  margin-left: auto;
-  margin-right: auto;
+  height: 300px;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
+.jsplayer-theme-title {
+  margin-bottom: 40px;
+}
+
+.jsplayer-theme-desciption{
+  margin-top: 40px;
+  line-height: 1.7;
+
+}
+.github-logo{
+  width: 100px;
+}
