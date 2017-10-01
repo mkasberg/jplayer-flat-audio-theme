@@ -2,14 +2,68 @@
  * Use any font you want.
  */
 
+html,
 body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+body {
+  background: #f3f3f3;
+  background: linear-gradient(to bottom, #f3f3f3, #e1e1e1);
   font-family: "Open Sans", sans-serif;
   text-align: center;
 }
 
-.content-area {
-  width: 860px;
-  margin-left: auto;
-  margin-right: auto;
+.content-wrapper {
+  display: table;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 85%;
 }
 
+.content-area {
+  display: table-cell;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+}
+
+h1 {
+  margin: 0;
+  font-size: 48px;
+}
+
+.btn-github {
+  background: #24292e;
+  border: 1px solid #1b2024;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  line-height: 1;
+  padding: 1em;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-github:hover {
+  background: #1b2024;
+}
+
+.btn-icon,
+.btn-label {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.btn-icon {
+  margin-right: .5em;
+}
+
+#jp_container_1 {
+  margin-top: 3em;
+}
