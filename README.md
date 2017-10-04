@@ -9,28 +9,28 @@ View a live preview (of this repository itself) at [https://mkasberg.github.io/j
 1. Install jPlayer on your site. This theme is audio-only, so you can follow the
 audio-only [quick start instructions](http://jplayer.org/latest/quick-start-guide/)
 if doing this for the first time. Here's a quick summary:
-  1. Download [jPlayer](https://github.com/happyworm/jPlayer/releases).
-  2. Upload jquery.jplayer.min.js and jquery.jplayer.swf to `/js`.
-  3. Include jQuery and jPlayer:
+2. Download [jPlayer](https://github.com/happyworm/jPlayer/releases).
+3. Upload jquery.jplayer.min.js and jquery.jplayer.swf to `/js`.
+4. Include jQuery and jPlayer:
 
     ```html
     <script type="text/javascript" src="/js/jquery.jplayer.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     ```
 
-2. Our theme requires Font Awesome. Include it. You can do this from the CDN or your own hosted version.
+5. Our theme requires Font Awesome. Include it. You can do this from the CDN or your own hosted version.
 
     ```html
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     ```
 
-3. Use the CSS for our theme. This is the theme itself, which you can find in the `css` folder of this repository.
+6. Use the CSS for our theme. This is the theme itself, which you can find in the `css` folder of this repository.
 
     ```html
     <link rel="stylesheet" type="text/css" href="css/jplayer-flat-audio-theme.css" />
     ```
 
-4. Add required HTML. Thel elements here should match what's in our theme.
+7. Add required HTML. Thel elements here should match what's in our theme.
 
     ```html
     <div id="jquery_jplayer_1" class="jp-jplayer"></div>
@@ -67,7 +67,7 @@ if doing this for the first time. Here's a quick summary:
     </div>
     ```
 
-5. Add Javascript for jPlayer to run on the page. This is just the normal
+8. Add Javascript for jPlayer to run on the page. This is just the normal
 jPlayer javascript, the same as is used in jPlayer's quick-start guide.
 
     ```html
@@ -92,7 +92,7 @@ jPlayer javascript, the same as is used in jPlayer's quick-start guide.
         toggleDuration: true
       });
     });
-  </script>
+    </script>
     ```
 
 That's it! You're all set!
