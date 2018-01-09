@@ -133,14 +133,14 @@
 }
 .jp-audio .jp-volume-controls .jp-volume-max {
   right: 0px;
-  padding-right: 6px;
+  padding-right: 10px;
 }
 .jp-audio .jp-volume-controls .jp-volume-bar {
   position: absolute;
   top: 50%;
   left: 10px;
   height: 30%;
-  width: 60px;
+  width: 75px;
   cursor: pointer;
 }
 .jp-audio .jp-volume-controls .jp-volume-bar .jp-volume-bar-value {
@@ -172,4 +172,38 @@
 .jp-state-no-volume .jp-progress,
 .jp-state-no-volume .jp-time-holder {
   right: 0;
+}
+
+/* Audio Playlist */
+.jp-audio .jp-type-playlist .jp-controls {
+    width: 150px;
+}
+.jp-audio .jp-type-playlist .jp-time-holder {
+    left: 150px;
+}
+.jp-audio .jp-type-playlist .jp-progress {
+    left: 150px;    
+}
+
+
+.jp-audio .jp-playlist {
+    position: absolute;
+    top: 3em;
+    width: 100%;
+    background-color: #2C3E50;
+}
+.jp-audio .jp-playlist ul {
+    list-style: none;
+    padding: 0 1em;
+}
+.jp-audio .jp-playlist ul a {
+    color: #ddd;
+    text-decoration: none;
+}
+.jp-audio .jp-playlist ul li.jp-playlist-current a {
+    color: #2980B9;
+}
+.jp-audio .jp-playlist ul li .jp-free-media {
+    display: block;
+    float: right;
 }
