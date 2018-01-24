@@ -1,6 +1,6 @@
 # jPlayer Flat Audio Theme
 
-A simple jPlayer theme for playing a single audio file.
+A simple jPlayer theme for playing a single audio file or audio playlist.
 
 View a live preview (of this repository itself) at [https://mkasberg.github.io/jplayer-flat-audio-theme](https://mkasberg.github.io/jplayer-flat-audio-theme).
 
@@ -67,36 +67,6 @@ if doing this for the first time. Here's a quick summary:
     </div>
     ```
 
-    Playlist:
-
-    ```html
-    <div class="jp-gui jp-interface">
-        <div class="jp-controls">
-            <a class="jp-previous"><i class="fa fa-backward"></i></a>
-            <a class="jp-play"><i class="fa fa-play"></i></a>
-            <a class="jp-pause"><i class="fa fa-pause"></i></a>
-            <a class="jp-stop"><i class="fa fa-stop"></i></a>
-            <a class="jp-next"><i class="fa fa-forward"></i></a>
-        </div>
-        <div class="jp-progress">
-            <div class="jp-seek-bar">
-                <div class="jp-play-bar"></div>
-            </div>
-        </div>
-        <div class="jp-volume-controls">
-            <a class="jp-mute"><i class="fa fa-volume-off"></i></a>
-            <a class="jp-volume-max"><i class="fa fa-volume-up"></i></a>
-            <div class="jp-volume-bar">
-                <div class="jp-volume-bar-value"></div>
-            </div>
-        </div>
-        <div class="jp-time-holder">
-            <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-            <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-        </div>
-    </div>
-    ```
-
 8. Add Javascript for jPlayer to run on the page. This is just the normal
 jPlayer javascript, the same as is used in jPlayer's quick-start guide.
 
@@ -126,6 +96,37 @@ jPlayer javascript, the same as is used in jPlayer's quick-start guide.
     ```
 
 That's it! You're all set!
+
+### For an audio playlist see the following additional instructions.
+
+9. Upload jplayer.playlist.min.js to `/js`.
+10. Include jplayer.playlist.min.js:
+
+    ```html
+    <script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
+    ````
+
+11. Add previous and next controls.
+
+    ```html
+    <a class="jp-previous"><i class="fa fa-backward"></i></a>
+    <a class="jp-next"><i class="fa fa-forward"></i></a>
+    ```
+    
+    Replace CSS class "jp-type-single" with "jp-type-playlist" to match style information.
+    
+    Add a placeholder for the playlist inside the .jp-type-playlist element.
+    
+    ```html
+	<div class="jp-playlist">
+		<ul>
+			<li></li>
+		</ul>
+	</div>
+    ````
+    
+See playlist.html for a full functional example.
+
 
 ## Contributing
 

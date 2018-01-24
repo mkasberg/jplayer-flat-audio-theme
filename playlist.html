@@ -21,15 +21,19 @@
                     <svg class="btn-icon" aria-hidden="true" fill="#fff" class="octicon octicon-mark-github" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
                     <span class="btn-label">More on Github</span>
                 </a>
-            </p>
-            <div id="jquery_jplayer_1" class="jp-jplayer"></div>
-            <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
-                <div class="jp-type-single">
+            </p>            
+            <h3>Example for an audio playlist</h3>
+
+            <div id="jquery_jplayer_playlist" class="jp-jplayer"></div>
+            <div id="jp_container_playlist" class="jp-audio" role="application" aria-label="media player">
+                <div class="jp-type-playlist">
                     <div class="jp-gui jp-interface">
                         <div class="jp-controls">
+                            <a class="jp-previous"><i class="fa fa-backward"></i></a>
                             <a class="jp-play"><i class="fa fa-play"></i></a>
                             <a class="jp-pause"><i class="fa fa-pause"></i></a>
                             <a class="jp-stop"><i class="fa fa-stop"></i></a>
+                            <a class="jp-next"><i class="fa fa-forward"></i></a>
                         </div>
                         <div class="jp-progress">
                             <div class="jp-seek-bar">
@@ -47,7 +51,14 @@
                             <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
                             <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
                         </div>
-                    </div>
+                    </div>                    
+            
+            		<div class="jp-playlist">
+            			<ul>
+            				<li></li>
+            			</ul>
+            		</div>
+                    
                     <div class="jp-no-solution">
                         <span>Update Required</span>
                         To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
@@ -56,36 +67,77 @@
             </div>
             
             <div id="examples">
-                <h3>Another example: <a href="playlist.html">audio playlist</a></h3>
+                <h3>Example: <a href="index.html">single audio player</a></h3>
             </div>
+            
         </div>
     </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
 
     <!-- jPlayer JS -->
     <script type="text/javascript">
     $(document).ready(function(){
-      $("#jquery_jplayer_1").jPlayer({
-        ready: function () {
-          $(this).jPlayer("setMedia", {
-            title: "Bubble",
-            m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
-            oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
-          });
-        },
-        cssSelectorAncestor: "#jp_container_1",
-        swfPath: "/js",
-        supplied: "m4a, oga",
-        useStateClassSkin: true,
-        autoBlur: false,
-        smoothPlayBar: true,
-        keyEnabled: true,
-        remainingDuration: true,
-        toggleDuration: true
-      });
+        
+      	new jPlayerPlaylist({
+      		jPlayer: "#jquery_jplayer_playlist",
+      		cssSelectorAncestor: "#jp_container_playlist"
+      	}, [
+      		{
+      			title:"Bubble",
+      			free:true,
+      			mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+      			oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+      		},
+      		{
+      			title:"Cro Magnon Man",
+      			mp3:"http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3",
+      			oga:"http://www.jplayer.org/audio/ogg/TSP-01-Cro_magnon_man.ogg"
+      		},
+      		{
+      			title:"Your Face",
+      			mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+      			oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg"
+      		},
+      		{
+      			title:"Cyber Sonnet",
+      			mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+      			oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
+      		},
+      		{
+      			title:"Stirring of a Fool",
+      			mp3:"http://www.jplayer.org/audio/mp3/Miaow-08-Stirring-of-a-fool.mp3",
+      			oga:"http://www.jplayer.org/audio/ogg/Miaow-08-Stirring-of-a-fool.ogg"
+      		},
+      		{
+      			title:"Partir",
+      			free: true,
+      			mp3:"http://www.jplayer.org/audio/mp3/Miaow-09-Partir.mp3",
+      			oga:"http://www.jplayer.org/audio/ogg/Miaow-09-Partir.ogg"
+      		},
+      		{
+      			title:"Thin Ice",
+      			mp3:"http://www.jplayer.org/audio/mp3/Miaow-10-Thin-ice.mp3",
+      			oga:"http://www.jplayer.org/audio/ogg/Miaow-10-Thin-ice.ogg"
+      		}
+      	], {
+              volume: 1.0,
+              playlistOptions: {
+                  autoPlay: false,},
+      		swfPath: "js",
+      		supplied: "oga, mp3",
+      		wmode: "window",
+      		useStateClassSkin: true,
+      		autoBlur: false,
+      		smoothPlayBar: true,
+      		keyEnabled: true
+      	});
+    
+ 
     });
+    
   </script>
 
 </body>
