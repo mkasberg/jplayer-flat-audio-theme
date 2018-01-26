@@ -67,3 +67,8 @@ h1 {
 #jp_container_1 {
   margin-top: 3em;
 }
+
+.jp-audio .jp-playlist {
+    text-align: left;
+}
+
